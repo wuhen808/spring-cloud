@@ -1,0 +1,21 @@
+server:
+  port: 8762
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///G:\boot
+          search-paths: config-test
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+management:
+  security:
+    enabled: false
