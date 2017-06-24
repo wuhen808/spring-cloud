@@ -38,6 +38,29 @@
 	</dependencyManagement>
 
 	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.wuhen.maven.plugin</groupId>
+				<artifactId>fabu-maven-plugin</artifactId>
+				<version>0.0.1</version>
+				<!-- <executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>fabu</goal>
+						</goals>
+					</execution>
+				</executions> -->
+				<configuration>
+					<serverDir>/home/wuhen/</serverDir>
+					<copyDir>C:\Users\Administrator\Desktop\tt</copyDir>
+					<serverId>fabu</serverId>
+					<servers>
+						<server>192.168.189.128:22</server>
+					</servers>					
+				</configuration>
+			</plugin>
+		</plugins>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -52,6 +75,7 @@
 		<module>eureka-server</module>
 		<module>config-server</module>
 		<module>provider-user</module>
+		<module>ribbon-consumer</module>
 	</modules>
 
 </project>

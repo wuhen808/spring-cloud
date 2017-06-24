@@ -11,10 +11,12 @@ public class ConfigTestController {
 
 	@Value("${from}")
 	private String from;
+	@Value("${from1}")
+	private String from1;
 	
 	@GetMapping("/test")
 	public String properties(){
-		return from;
+		return from+"---"+from1;
 	}
 	
 }

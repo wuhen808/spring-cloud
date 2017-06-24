@@ -1,12 +1,11 @@
 server:
-  port: 8763
+  port: 8764
 spring:
   application:
-    name: provider-user
+    name: ribbon-consumer
   cloud:
-    config:
-      name: user,aaa
-      discovery: 
+    config: 
+      discovery:
         enabled: true
         service-id: config-server
 eureka:
